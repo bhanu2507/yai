@@ -1,14 +1,51 @@
+
+<script>
+    paypal.Button.render({
+
+        env: 'production', // Or 'sandbox'
+
+        client: {
+            sandbox:    'xxxxxxxxx',
+            production: 'xxxxxxxxx'
+        },
+
+        commit: true, // Show a 'Pay Now' button
+
+        payment: function(data, actions) {
+            return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '1.00', currency: 'USD' }
+                        }
+                    ]
+                }
+            });
+        },
+
+        onAuthorize: function(data, actions) {
+            return actions.payment.execute().then(function(payment) {
+
+                // The payment is complete!
+                // You can now show a confirmation message to the customer
+            });
+        }
+
+    }, '#paypal-button');
+</script>
 <div class="container">
   <h2>School Registration</h2>
-
-  <form role="form" novalidate ng-submit="createSchool()">
+  <div class="alert alert-success" role="alert" ng-show="regis">
+    <strong>Congratulations!</strong> Your school has been successfully registered. Your ID is {{sid}}. Proceed to pay the fees. <div id="paypal-button"></div>
+  </div>
+  <form role="form" name="sform" ng-submit="sform.$valid && createSchool()" ng-hide="regis">
     <p class="form-group">
       <label for="schoolName">Name of Organisation/School</label>
-      <input id="schoolName" required name="schoolName" type="text" ng-model="schoolName" class="form-control" />
+      <input id="schoolName" required name="schoolName" type="text" ng-model="schoolName" class="form-control" required="true" />
     </p>
     <p class="form-group">
       <label for="ownerName">Owner/Director Name</label>
-      <input id="ownerName" required name="ownerName" type="text" ng-model="ownerName" class="form-control" />
+      <input id="ownerName" required name="ownerName" type="text" ng-model="ownerName" class="form-control" required="true" />
     </p>
     <p class="form-group">
       <label for="qualify">Qualifications</label>
@@ -16,7 +53,7 @@
     </p>
     <p class="form-group">
       <label for="address">Address</label>
-      <textarea id="address" name="address" rows="3" ng-model="address" class="form-control"></textarea>
+      <textarea id="address" name="address" rows="3" ng-model="address" class="form-control" required="true"></textarea>
     </p>
     <div class="form-inline">
       <p class="form-group">
@@ -29,7 +66,7 @@
       </p>
       <p class="form-group">
         <label for="tel">Tel</label>
-        <input id="tel" name="tel" type="text" ng-model="tel" class="form-control" />
+        <input id="tel" name="tel" type="text" ng-model="tel" class="form-control" required="true" />
       </p>
       <p class="form-group">
         <label for="fax">Fax</label>
@@ -38,7 +75,7 @@
     </div>
     <p class="form-group">
       <label for="email">Main Contact Email</label>
-      <input id="email" name="email" type="text" ng-model="email" class="form-control" />
+      <input id="email" name="email" type="text" ng-model="email" class="form-control" required="true" />
     </p>
     <p class="form-group">
       <label for="website">Web address</label>
@@ -54,7 +91,7 @@
     </p>
     <p class="form-group">
       <label for="logo">Your Center Logo (if any)</label>
-      <input id="logo" name="logo" type="file" ng-model="logo" class="form-control" />
+      <input id="logo" name="logo" type="text" ng-model="logo" class="form-control" />
     </p>
     <p>
       <button  class="btn btn-default">Register</button>

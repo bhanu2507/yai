@@ -33,10 +33,10 @@ exports.putschool = function(req, res) {
         "'" + req.query.desc + "',\n" +
         "'" + req.query.ylink + "',\n" +
         "'" + req.query.logo + "');\n"
-//console.log(sqls);
+ //console.log(sqls);
     connection.query(sqls, function (err, rows, fields) {
         if (!err) {
-            console.log('The solution is: ', fields);
+            //console.log('The solution is: ', rows);
              //console.log(err.message);
             res.send(rows);
         }
