@@ -1,4 +1,4 @@
-<!--script>
+<script>
     paypal.Button.render({
 
         env: 'sandbox', // Or 'sandbox'
@@ -31,25 +31,24 @@
         }
 
     }, '#paypal-button');
-</script-->
+</script>
 <div class="container">
-  <div class="loading" ng-show="putschool"></div>
-  <h2>School Registration</h2>
-  <div class="alert alert-success" role="alert" ng-show="regis">
-    <strong>Congratulations!</strong> Your school has been successfully registered. Your ID is {{sid}}. Proceed to pay the fees. <div id="paypal-button"></div>
-    <paypal-button env="opts.env" client="opts.client" payment="opts.payment" commit="opts.commit" on-authorize="opts.onAuthorize"></paypal-button>
+  <div class="loading" ng-show="puttrainer"></div>
+  <h2>Trainer Registration</h2>
+  <div class="alert alert-success" role="alert" ng-show="regit">
+    <strong>Congratulations!</strong> Trainer has been successfully registered. Your ID is {{sid}}. Proceed to pay the fees. <div id="paypal-button"></div>
   </div>
-  <form role="form" name="sform" ng-submit="sform.$valid && createSchool()" ng-hide="regis">
+  <form role="form" name="sform" ng-submit="sform.$valid && createTrainer()" ng-hide="regit">
     <p class="form-group">
-      <label for="schoolName">Name of Organisation/School</label>
-      <input id="schoolName" name="schoolName" type="text" ng-model="schoolName" class="form-control" required />
+      <label for="trainerName">Name</label>
+      <input id="trainerName" name="trainerName" type="text" ng-model="trainerName" class="form-control" required />
       <span ng-show="sform.schoolName.$touched && sform.schoolName.$invalid">School Name is required.</span>
     </p>
-    <p class="form-group">
+    <!--p class="form-group">
       <label for="ownerName">Owner/Director Name</label>
       <input id="ownerName" name="ownerName" type="text" ng-model="ownerName" class="form-control" required />
       <span ng-show="sform.ownerName.$touched && sform.ownerName.$invalid">Owner Name is required.</span>
-    </p>
+    </p-->
     <p class="form-group">
       <label for="qualify">Qualifications</label>
       <input id="qualify" name="qualify" type="text" ng-model="qualify" class="form-control" required />
@@ -98,10 +97,10 @@
       <label for="youtubelink">YouTube link (if any)</label>
       <input id="youtubelink" name="youtubelink" type="text" ng-model="youtubelink" class="form-control" />
     </p>
-    <p class="form-group">
+    <!--p class="form-group">
       <label for="logo">Your Center Logo (if any)</label>
       <input id="logo" name="logo" type="text" ng-model="logo" class="form-control" />
-    </p>
+    </p-->
     <p>
       <button  class="btn btn-default">Register</button>
       <button  class="btn btn-default">Cancel</button>

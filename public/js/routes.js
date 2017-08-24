@@ -1,6 +1,9 @@
 var app = angular.module("yogaalliance");
 
-app.config(function($routeProvider) {
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+    $locationProvider
+        .html5Mode(false)
+        .hashPrefix('!');
     $routeProvider
         .when('/home', {
             templateUrl: 'view/home.html'
@@ -8,6 +11,10 @@ app.config(function($routeProvider) {
         .when('/login', {
             templateUrl: 'view/login.html',
             controller: 'LoginCtrl'
+        })
+        .when('/regit', {
+            templateUrl: 'view/trainerreg.html',
+            controller: 'TrainerRegCtrl'
         })
         .when('/regis', {
             templateUrl: 'view/schoolreg.html',
@@ -30,7 +37,7 @@ app.config(function($routeProvider) {
         .otherwise({
             redirectTo: '/home'
         })
-});
+}]);
 
 
 var checkLoggedin = function($q, $timeout, $http, $location, $rootScope) {
