@@ -3,7 +3,7 @@
 
 
 angular.module('yogaalliance')
-    .controller('SchoolRegCtrl', function ($scope, $http) {
+    .controller('SchoolRegCtrl', function ($scope, $http, $location) {
     $scope.createSchool = function () {
        var data = $.param({
             name: $scope.schoolName,
@@ -29,11 +29,12 @@ angular.module('yogaalliance')
                 console.log(result.data.insertId);
             });
         }
+        /*
     $scope.opts = {
-        env: 'production',
+        env: 'sandbox',
         client: {
-            sandbox:    'AWi18rxt26-hrueMoPZ0tpGEOJnNT4QkiMQst9pYgaQNAfS1FLFxkxQuiaqRBj1vV5PmgHX_jA_c1ncL',
-            production: 'AVZhosFzrnZ5Mf3tiOxAD0M6NHv8pcB2IFNHAfp_h69mmbd-LElFYkJUSII3Y0FPbm7S7lxBuqWImLbl'
+            sandbox:    'AfGf4NK75-N-Fb7Id8xjGKSQiuXuo-3T_lusUKJCdRPdMTOfK26GKeZBcdQd46qphWU-Z_BSzsE4oE4e',
+            //production: 'AVZhosFzrnZ5Mf3tiOxAD0M6NHv8pcB2IFNHAfp_h69mmbd-LElFYkJUSII3Y0FPbm7S7lxBuqWImLbl'
         },
         payment: function() {
             var env    = this.props.env;
@@ -51,9 +52,10 @@ angular.module('yogaalliance')
             // Optional: display a confirmation page here
             return actions.payment.execute().then(function() {
                 // Show a success page to the buyer
+                $location.href="/profile";
             });
         }
-    };
+    };*/
 
     });
 

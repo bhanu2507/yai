@@ -5,7 +5,7 @@
 
         client: {
             sandbox:    'AfGf4NK75-N-Fb7Id8xjGKSQiuXuo-3T_lusUKJCdRPdMTOfK26GKeZBcdQd46qphWU-Z_BSzsE4oE4e',
-            production: 'xxxxxxxxx'
+          //  production: 'jnnv97b5pvgx8smx$ffabdc7eafa5a705c9cc26a995f50596'
         },
 
         commit: true, // Show a 'Pay Now' button
@@ -24,7 +24,7 @@
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function(payment) {
-
+                window.alert('Payment Complete!');
                 // The payment is complete!
                 // You can now show a confirmation message to the customer
             });
@@ -32,7 +32,7 @@
 
     }, '#paypal-button');
 </script>
-<div class="container">
+<div class="container main">
   <div class="loading" ng-show="puttrainer"></div>
   <h2>Trainer Registration</h2>
   <div class="alert alert-success" role="alert" ng-show="regit">

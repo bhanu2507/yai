@@ -1,9 +1,9 @@
-body {
-    padding-top: 70px;
-}
-
 .main{
     margin-top: 70px;
+}
+p.pregular {
+    text-align: center;
+    font-size: 22px;
 }
 
 h1.title {

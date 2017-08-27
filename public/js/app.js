@@ -7,6 +7,5 @@ angular.module('yogaalliance', [
     'ngAnimate',
     'ngSanitize',
     'ngMessages',
-    'ngAria',
-    'paypal-button'
+    'ngAria'
 ]);

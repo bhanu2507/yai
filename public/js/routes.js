@@ -8,6 +8,12 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
         .when('/home', {
             templateUrl: 'view/home.html'
         })
+        .when('/whatwedo', {
+            templateUrl: 'view/whatwedo.html'
+        })
+        .when('/iyt', {
+            templateUrl: 'view/iyt.html'
+        })
         .when('/login', {
             templateUrl: 'view/login.html',
             controller: 'LoginCtrl'
@@ -21,11 +27,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
             controller: 'SchoolRegCtrl'
         })
         .when('/profile', {
-            templateUrl: 'view/profile.html',
-            controller: 'NavCtrl',
-            resolve: {
-                logincheck: checkLoggedin
-            }
+            templateUrl: 'view/profile.html'
         })
         .when('/profile/:project', {
             templateUrl: 'view/tasks.html',

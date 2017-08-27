@@ -1,4 +1,4 @@
-<!--script>
+<script>
     paypal.Button.render({
 
         env: 'sandbox', // Or 'sandbox'
@@ -15,7 +15,7 @@
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '1.00', currency: 'USD' }
+                            amount: { total: '0.01', currency: 'USD' }
                         }
                     ]
                 }
@@ -24,15 +24,15 @@
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function(payment) {
-
+                window.alert('Payment Complete!');
                 // The payment is complete!
                 // You can now show a confirmation message to the customer
             });
         }
 
     }, '#paypal-button');
-</script-->
-<div class="container">
+</script>
+<div class="container main">
   <div class="loading" ng-show="putschool"></div>
   <h2>School Registration</h2>
   <div class="alert alert-success" role="alert" ng-show="regis">
