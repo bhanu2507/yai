@@ -1,7 +1,9 @@
 .main{
     margin-top: 70px;
 }
-
+.navbar-brand {
+    padding: 5px 5px 5px 5px;
+}
 .parallax {
     position: absolute;
     background-attachment: fixed;
@@ -19,6 +21,7 @@
 p.pregular {
     text-align: center;
     font-size: 22px;
+    display: inline-block;
 }
 
 h1.title {
