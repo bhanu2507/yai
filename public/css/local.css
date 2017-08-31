@@ -1,6 +1,10 @@
 .main{
     margin-top: 70px;
 }
+.navbar-brand {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 
 .parallax {
     position: absolute;
@@ -16,6 +20,16 @@
     -o-background-size: cover;
     background-size: cover;
 }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 30px;
+    background-color: #000000;
+}
+
 p.pregular {
     text-align: center;
     font-size: 22px;
