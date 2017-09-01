@@ -32,7 +32,12 @@
 
 p.pregular {
     text-align: center;
-    font-size: 22px;
+    font-size: 25px;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-weight: 700;
+    color: #000000;
+    text-shadow: 1px 1px 4px #ffffff;
 }
 
 h1.title {
