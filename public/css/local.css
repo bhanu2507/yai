@@ -31,13 +31,14 @@
 }
 
 p.pregular {
-    text-align: center;
-    font-size: 25px;
-    margin-left: 15%;
+   text-align: justify;
+    font-size: 18px;
+  /*  margin-left: 15%;*/
     margin-right: 15%;
     font-weight: 700;
     color: #000000;
     text-shadow: 1px 1px 4px #ffffff;
+    width: 550px;
 }
 
 h1.title {
