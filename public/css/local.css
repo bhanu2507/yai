@@ -47,6 +47,27 @@ h1.title {
     font-weight: 400;
 }
 
+.intro-text {
+    text-align: center;
+    color: #f37e31;
+    padding-top: 30%;
+    padding-bottom: 50px;
+    text-shadow: 1px 1px 8px grey;}
+.intro-text .intro-lead-in {
+    font-size: 52px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 52px;
+    margin-bottom: 20px;
+    font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.intro-text .intro-heading {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 25px;
+    font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase; }
+
 hr{
     width: 10%;
     color: #fff;
