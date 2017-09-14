@@ -7,6 +7,5 @@ angular.module('yogaalliance', [
     'ngAnimate',
     'ngSanitize',
     'ngMessages',
-    'ngAria',
-    'angularUtils.directives.dirPagination'
+    'ngAria'
 ]);
