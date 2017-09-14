@@ -7,7 +7,7 @@ angular.module('yogaalliance')
 
         $http.get('/listschools')
             .then(function (result) {
-                console.log(result.data);
+                console.log(result);
                 $scope.schools = result.data;
             });
         $scope.currentPage = 0;
