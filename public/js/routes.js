@@ -26,6 +26,14 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
             templateUrl: 'view/schoolreg.html',
             controller: 'SchoolRegCtrl'
         })
+        .when('/trainerlist', {
+            templateUrl: 'view/trainerlist.html',
+            controller: 'TrainerListCtrl'
+        })
+        .when('/schoollist', {
+            templateUrl: 'view/schoollist.html',
+            controller: 'SchoolListCtrl'
+        })
         .when('/profile', {
             templateUrl: 'view/profile.html'
         })

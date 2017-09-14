@@ -1,0 +1,32 @@
+<div class="container main">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th><a href="" ng-click="order('name')">Name</a></th>
+            <th><a href="" ng-click="order('owner')">Owner</a></th>
+            <th><a href="" ng-click="order('townandcounty')">Location</a></th>
+            <th><a href="" ng-click="order('tel')">Telephone</a></th>
+            <th><a href="" ng-click="order('email')">Email</a></th>
+            <th><a href="" ng-click="order('webaddress')">Web Site</a></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr ng-repeat="school in schools | startFrom:currentPage*pageSize | limitTo:pageSize">
+            <td>{{school.name}}</td>
+            <td>{{school.owner}}</td>
+            <td>{{school.townandcounty}}</td>
+            <td>{{school.tel}}</td>
+            <td>{{school.email}}</td>
+            <td>{{school.webaddress}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPages()}}
+    <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
+</div>

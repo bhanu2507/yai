@@ -42,3 +42,15 @@ exports.puttrainer = function(req, res) {
     });
 
 }
+
+exports.listtrainers = function(req,res) {
+    connection.query("Select * from trainers;", function (err, rows, fields) {
+        if (!err) {
+            //console.log('The solution is: ', rows);
+            //console.log(err.message);
+            res.send(rows);
+        }
+        else
+            console.log(err.message);
+    });
+}

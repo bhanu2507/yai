@@ -45,3 +45,15 @@ exports.putschool = function(req, res) {
     });
 
 }
+
+exports.listschools = function(req,res) {
+    connection.query("Select * from schools;", function (err, rows, fields) {
+        if (!err) {
+            //console.log('The solution is: ', rows);
+            //console.log(err.message);
+            res.send(rows);
+        }
+        else
+            console.log(err.message);
+    });
+}
