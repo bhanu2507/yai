@@ -32,7 +32,7 @@ app.use(bodyParser.urlencoded({
 require('./server/routes/auth.js')(app, passport);
 
 schls = require('./server/schoolreg');
-trns = require('./server/trainerreg');
+trns = require('./server/trainerreg');e
 app.post('/putschool', schls.putschool);
 app.post('/puttrainer', trns.puttrainer);
 app.get('/listschools', schls.listschools);
