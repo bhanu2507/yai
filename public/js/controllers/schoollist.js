@@ -11,7 +11,7 @@ angular.module('yogaalliance')
                 $scope.schools = result.data;
             });
         $scope.currentPage = 0;
-        $scope.pageSize = 10;
+        $scope.pageSize = 5;
         $scope.data = [];
         $scope.numberOfPages=function(){
             return Math.ceil($scope.schools.length/$scope.pageSize);
@@ -21,8 +21,8 @@ angular.module('yogaalliance')
         }
 
 
-    })
-    .filter('startFrom', function() {
+    });
+angular.filter('startFrom', function() {
         return function(input, start) {
             start = +start; //parse to int
             if (input != 'undefined') {
