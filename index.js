@@ -36,7 +36,7 @@ trns = require('./server/trainerreg');
 app.post('/putschool', schls.putschool);
 app.post('/puttrainer', trns.puttrainer);
 app.get('/listschools', schls.listschools);
-app.post('/listtrainers', trns.listtrainers);
+app.get('/listtrainers', trns.listtrainers);
 /*
 app.get('/pstatus', pdtls.getprojectstatus);
 app.get('/plist', pdtls.listprojects);
