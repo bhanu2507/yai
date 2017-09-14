@@ -13,7 +13,7 @@
         </thead>
         <tbody>
 
-        <tr ng-repeat="trainer in trainers | startFrom:currentPage*pageSize | limitTo:pageSize">
+        <tr dir-paginate="trainer in trainers|filter:search|itemsPerPage:5">
             <td>{{trainer.name}}</td>
             <td>{{trainer.qualifications}}</td>
             <td>{{trainer.townandcounty}}</td>
@@ -23,11 +23,9 @@
         </tr>
         </tbody>
     </table>
-    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
-        Previous
-    </button>
-    {{currentPage+1}}/{{numberOfPages()}}
-    <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
-        Next
-    </button>
+    <dir-pagination-controls
+            max-size="5"
+            direction-links="true"
+            boundary-links="true" >
+    </dir-pagination-controls>
 </div>
