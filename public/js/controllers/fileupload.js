@@ -8,7 +8,7 @@ angular.module('yogaalliance')
                 
                 console.log('file is ' );
                 console.dir(file);
-                console.log($location.path);
+                console.log($location);
                 var uploadUrl = "../kriyoga";
                 fileUpload.uploadFileToUrl(file, uploadUrl);
              };
