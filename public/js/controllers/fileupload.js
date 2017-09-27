@@ -9,7 +9,7 @@ angular.module('yogaalliance')
                 console.log('file is ' );
                 console.dir(file);
                 console.log($location);
-                var uploadUrl = "../kriyoga";
+                var uploadUrl = "/kriyoga";
                 fileUpload.uploadFileToUrl(file, uploadUrl);
              };
         }])

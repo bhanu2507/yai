@@ -46,6 +46,7 @@ app.post('/updatetaskstatus', pdtls.updatetaskstatus);
 */
 app.use('/scripts', express.static(__dirname + '/node_modules/'));
 app.use('/bower_components', express.static(__dirname + '/bower_components/'));
+app.use('/kriyoga', express.static(__dirname + '/kriyoga/'));
 
 port = process.env.PORT || 3300;
 
