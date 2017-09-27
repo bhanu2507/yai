@@ -18,12 +18,12 @@ angular.module('yogaalliance')
         }]);
 
 angular.module('yogaalliance')
-        .service('fileUpload', ['$https:', function($https) {
+        .service('fileUpload', ['$http', function($http) {
             this.uploadFileToUrl = function(file, uploadUrl){
                 var fd = new FormData();
                 fd.append('file', file);
              
-                $https.post(uploadUrl, fd, {
+                $http.post(uploadUrl, fd, {
                    transformRequest: angular.identity,
                    headers: {'Content-Type': undefined}
                 })
