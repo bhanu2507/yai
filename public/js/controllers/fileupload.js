@@ -2,14 +2,14 @@
 
 
 angular.module('yogaalliance')
-        .controller('fileUploadCtrl', ['$scope', 'fileUpload', function($scope, fileUpload) {
+        .controller('fileUploadCtrl', ['$scope', 'fileUpload', function($scope, fileUpload, $location) {
             $scope.uploadFile = function(){
                 var file = $scope.myFile;
                 
                 console.log('file is ' );
                 console.dir(file);
-                
-                var uploadUrl = "/kriyoga";
+                console.log($location.path);
+                var uploadUrl = "../kriyoga";
                 fileUpload.uploadFileToUrl(file, uploadUrl);
              };
         }])
