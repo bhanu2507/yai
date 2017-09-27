@@ -9,7 +9,7 @@ angular.module('yogaalliance')
                 console.log('file is ' );
                 console.dir(file);
                 console.log($location);
-                var uploadUrl = "/kriyoga";
+                var uploadUrl = "https://www.googleapis.com/upload/storage/v1/b/kriyoga/o?uploadType=media";
                 fileUpload.uploadFileToUrl(file, uploadUrl);
              };
         }])
