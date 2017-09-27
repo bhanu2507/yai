@@ -24,8 +24,11 @@ angular.module('yogaalliance')
                 fd.append('file', file);
              
                 $http.post(uploadUrl, fd, {
-                   transformRequest: angular.identity,
-                   headers: {'Content-Type': undefined}
+                   //transformRequest: angular.identity,
+                   headers: {
+                                'Content-Type': 'image/jpeg',
+                                'Authorization': 'Bearer '+ 'AIzaSyCh-H9fxZXaR43dQQgg4FIwLWpAX2L5C7E'
+                            }
                 })
                 .then(function(msg){
                     console.log(msg);
