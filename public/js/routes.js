@@ -34,6 +34,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
             templateUrl: 'view/schoollist.html',
             controller: 'SchoolListCtrl'
         })
+        .when('/fileupload', {
+            templateUrl: 'view/fileupload.html',
+            controller: 'fileUploadCtrl'
+        })
         .when('/profile', {
             templateUrl: 'view/profile.html'
         })
