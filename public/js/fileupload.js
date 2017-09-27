@@ -27,8 +27,10 @@ angular.module('yogaalliance')
                    transformRequest: angular.identity,
                    headers: {'Content-Type': undefined}
                 })
-             
-                .then(function(){
+                .then(function(msg){
+                    console.log(msg);
+                }, function (error) {
+                    console.log(error);
                 });
              }            
         }])
