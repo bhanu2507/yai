@@ -28,10 +28,7 @@ angular.module('yogaalliance')
                    headers: {'Content-Type': undefined}
                 })
              
-                .success(function(){
-                })
-             
-                .error(function(){
+                .then(function(){
                 });
              }            
         }])
