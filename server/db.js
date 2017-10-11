@@ -3,9 +3,9 @@
 
 module.exports={
 	db: {
-		host : '130.211.245.39',
+		host : '104.196.35.188',
 		user : 'root',
-		password : 'yaikriyoga',
+		password : 'masterkamal',
 		database : 'yai'
 	}
 };
