@@ -1,6 +1,16 @@
 .main{
     margin-top: 70px;
 }
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    height: auto;
+}
+
 .navbar-brand {
     padding-top: 5px;
     padding-bottom: 5px;
