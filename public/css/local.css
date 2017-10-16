@@ -2,13 +2,41 @@
     margin-top: 70px;
 }
 
-.img-responsive,
-.thumbnail > img,
-.thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
+
+
+.carousel-inner .item {
     width: 100%;
-    max-height: 700px;
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.ad1 {
+    background: url(../img/carousel/img_3636.jpg) no-repeat center center fixed;
+}
+
+.ad2 {
+    background: url(../img/carousel/img_3712.jpg) no-repeat center center fixed;
+}
+
+.ad3 {
+    background: url(../img/carousel/img_3679.jpg) no-repeat center center fixed;
+}
+
+.carousel-caption {
+    bottom:25%;
+    background-color: #f37e31;
+    opacity: 0.5;
+}
+
+.carousel-caption.p {
+    font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.carousel-caption.h3 {
+    font-family: 'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .navbar-brand {
